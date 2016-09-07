@@ -1,0 +1,86 @@
+doctype html
+html(lang="en")
+	head
+		title Form app
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" href="../dist/styles.css")
+	body
+		div.align-block
+			h1 Thank you for choosing to subscribe to PDFfiller services!
+			div.main-block
+				form.main-block_left-part
+					div.three-columns
+						div.left-part-first-block
+							p.input-title Cardhoder Name
+							p.input-title Card Number
+							p.input-title Exp. Date
+							p.input-title Zip/Postal Code
+						div.buttons-block
+							div.info-fields
+								div.left-part-second-block
+									input.forminput.long-input(type='text' autofocus="autofocus" pattern='[A-Za-z]{3,}' placeholder="First Name" required)
+									input#cardinput.forminput.long-input.card-input(type='text' pattern="[0-9]{16}" placeholder="••••• ••••• ••••• •••••" required)
+									div.card-date
+										select.forminput.input-month(placeholder="MM" required)
+											option(value="" disabled selected) MM
+											- var x = 13;
+											- for (var i=1; i<x; i++) {
+											if i < 10
+												option= "0" + i
+											else
+												option= i
+											- }
+										p /
+										select.forminput.input-year(placeholder="YYYY" required)
+											option(value="" disabled selected) YYYY
+											- for (var i=2000; i<=2020; i++) {
+											option= i
+											- }
+									input.forminput.long-input(type='text' placeholder="01001" pattern="[0-9]{5}" maxlength="5" required)
+								div.left-part-third-block
+									input.forminput.long-input(type='text' placeholder="Last Name" pattern='[A-Za-z]{3,}' required)
+									div.credit-cards-pics
+										img(src="../src/img/visa.png")
+										img(src="../src/img/mastercard.png")
+										img(src="../src/img/discover.png")
+										img(src="../src/img/express.png")
+									div.cvv-block
+										p.cvv-block__title CVV/CVC
+										input.forminput.cvv-block__input(type='password' pattern="[0-9]{3,}" placeholder="XXXX" maxlength="4" required)
+							div.paypal-block
+								p.paypal-block__text Or pay with Paypal
+								button.paypal-block__button(type="button")
+							button.startsb(type="submit") Start My Subscription
+				div.main-block_right-part
+					p.order-summary Your Order Summary
+					div.order-block
+						div.order-block-row
+							p.business-annual
+								| Business Annual 
+								br
+								| Subscription
+							p.price
+								| $
+								span.bigger-price 179
+								| .88
+						p.user-count One user, billed annually
+						div.order-block-row.subtotal-block
+							p.subtotal-block__text Subtotal
+							p.price
+								| $
+								span.bigger-price 179
+								| .88
+						div.order-block-row
+							p.estimated-taxes__text Estimated Taxes
+							p.price
+								| $
+								span.bigger-price 0
+								| .00
+					div.total-due
+						p.total-due__text Total Due
+						p.price-due
+							| $
+							span.bigger-price-due 179
+							| .88
+		script(type='text/javascript' src='../dist/script.js')

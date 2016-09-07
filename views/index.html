@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form app</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/styles.css">
+  </head>
+  <body>
+    <div class="align-block">
+      <h1>Thank you for choosing to subscribe to PDFfiller services!</h1>
+      <div class="main-block">
+        <form class="main-block_left-part">
+          <div class="three-columns">
+            <div class="left-part-first-block">
+              <p class="input-title">Cardhoder Name</p>
+              <p class="input-title">Card Number</p>
+              <p class="input-title">Exp. Date</p>
+              <p class="input-title">Zip/Postal Code</p>
+            </div>
+            <div class="buttons-block">
+              <div class="info-fields">
+                <div class="left-part-second-block">
+                  <input class="forminput long-input" type="text" autofocus="autofocus" pattern="[A-Za-z]{3,}" placeholder="First Name" required>
+                  <input class="forminput long-input card-input" id="cardinput" type="text" pattern="[0-9]{16}" placeholder="••••• ••••• ••••• •••••" required>
+                  <div class="card-date">
+                    <select class="forminput input-month" placeholder="MM" required>
+                      <option value="" disabled selected>MM</option>
+                      <option>01</option>
+                      <option>02</option>
+                      <option>03</option>
+                      <option>04</option>
+                      <option>05</option>
+                      <option>06</option>
+                      <option>07</option>
+                      <option>08</option>
+                      <option>09</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                    </select>
+                    <p>/</p>
+                    <select class="forminput input-year" placeholder="YYYY" required>
+                      <option value="" disabled selected>YYYY</option>
+                      <option>2000</option>
+                      <option>2001</option>
+                      <option>2002</option>
+                      <option>2003</option>
+                      <option>2004</option>
+                      <option>2005</option>
+                      <option>2006</option>
+                      <option>2007</option>
+                      <option>2008</option>
+                      <option>2009</option>
+                      <option>2010</option>
+                      <option>2011</option>
+                      <option>2012</option>
+                      <option>2013</option>
+                      <option>2014</option>
+                      <option>2015</option>
+                      <option>2016</option>
+                      <option>2017</option>
+                      <option>2018</option>
+                      <option>2019</option>
+                      <option>2020</option>
+                    </select>
+                  </div>
+                  <input class="forminput long-input" type="text" placeholder="01001" pattern="[0-9]{5}" maxlength="5" required>
+                </div>
+                <div class="left-part-third-block">
+                  <input class="forminput long-input" type="text" placeholder="Last Name" pattern="[A-Za-z]{3,}" required>
+                  <div class="credit-cards-pics"><img src="../src/img/visa.png"><img src="../src/img/mastercard.png"><img src="../src/img/discover.png"><img src="../src/img/express.png"></div>
+                  <div class="cvv-block">
+                    <p class="cvv-block__title">CVV/CVC</p>
+                    <input class="forminput cvv-block__input" type="password" pattern="[0-9]{3,}" placeholder="XXXX" maxlength="4" required>
+                  </div>
+                </div>
+              </div>
+              <div class="paypal-block">
+                <p class="paypal-block__text">Or pay with Paypal</p>
+                <button class="paypal-block__button" type="button"></button>
+              </div>
+              <button class="startsb" type="submit">Start My Subscription</button>
+            </div>
+          </div>
+        </form>
+        <div class="main-block_right-part">
+          <p class="order-summary">Your Order Summary</p>
+          <div class="order-block">
+            <div class="order-block-row">
+              <p class="business-annual">Business Annual <br>Subscription</p>
+              <p class="price">$<span class="bigger-price">179</span>.88</p>
+            </div>
+            <p class="user-count">One user, billed annually</p>
+            <div class="order-block-row subtotal-block">
+              <p class="subtotal-block__text">Subtotal</p>
+              <p class="price">$<span class="bigger-price">179</span>.88</p>
+            </div>
+            <div class="order-block-row">
+              <p class="estimated-taxes__text">Estimated Taxes</p>
+              <p class="price">$<span class="bigger-price">0</span>.00</p>
+            </div>
+          </div>
+          <div class="total-due">
+            <p class="total-due__text">Total Due</p>
+            <p class="price-due">$<span class="bigger-price-due">179</span>.88</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../dist/script.js"></script>
+  </body>
+</html>
