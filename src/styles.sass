@@ -24,7 +24,6 @@ p
 
 p
 	color: #444;
-	letter-spacing: 0.5px;
 
 h1
 	font-family: $font-stack;
@@ -46,29 +45,29 @@ button
 
 .main-block 
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: wrap-reverse;
 	justify-content: center;
 
 .main-block_left-part
-	margin-right: 40px;
-
-.three-columns
-	display: flex;
-
-.left-part-first-block
 	display: flex;
 	flex-flow: column;
 	align-items: flex-end;
-	margin-right: 15px;
 
-.left-part-first-block > p:first-child
-	margin-top: 9px;
+.left-part-first-block,
+.left-part-second-block,
+.left-part-third-block,
+.left-part-fourth-block
+	display: flex;
+
+.left-part-fourth-block
+	margin-right: auto;
 
 .input-title
 	font-family: $font-stack;
 	font-weight: 700;
 	font-size: 14px;
-	margin-top: 36px;
+	margin-top: 9px;
+	margin-right: 15px;
 
 .forminput
 	height: 28px;
@@ -80,16 +79,18 @@ button
 	background-color: #fff;
 	margin-bottom: 20px;
 
+.forminput.first-name
+	margin-right: 10px;
+
+.card-input
+	margin-right: 13px;
+
+.forminput.card-input,
+.card-date
+	margin-right: 14px;
+
 .long-input
 	width: 150px;
-
-.info-fields
-	display: flex;
-
-.left-part-second-block
-	display: flex;
-	flex-flow: column;
-	margin-right: 15px;
 
 .card-input
 	letter-spacing: 0.5px;
@@ -99,6 +100,7 @@ button
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 20px;
+	width: 162px;
 
 .input-month
 	width: 64px;
@@ -125,10 +127,14 @@ button
 	justify-content: space-between;
 	margin-top: 3px;
 	margin-bottom: 22px;
+	width: 162px;
+
+.exp-date-block
+	display: flex;
 
 .cvv-block
 	display: flex;
-	align-items: center;
+	width: 162px;
 
 .cvv-block__title
 	margin-right: auto;
@@ -152,6 +158,7 @@ button
 	border: 1px solid #ddd;
 	+border-radius(3px)
 	margin-bottom: 20px;
+	width: 335px;
 
 .paypal-block__text
 	margin-right: auto;
@@ -168,7 +175,7 @@ button
 	border: none;
 
 .startsb
-	width: 100%;
+	width: 335px;
 	height: 42px;
 	background-color: #ff9000;
 	border: 1px solid #fd7722;
@@ -185,6 +192,7 @@ button
 	width: 310px;
 	text-align: center;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+	margin-left: 40px;
 
 .order-summary
 	font-family: $font-stack;
@@ -251,6 +259,110 @@ button
 	font-size: 24px;
 	font-weight: 400;
 
-/* @media only screen and (max-width: 400px)
-	
- */
+.credit-cards-pics_mobile
+	display: none;
+
+@media only screen and (max-width: 500px)
+	h1
+		font-size: 18px;
+		margin-bottom: 25px;
+
+	.align-block
+		margin-top: 35px;
+
+	.main-block_right-part
+		margin-left: 0;
+
+	.main-block_left-part
+		align-items: center;
+
+	.main-block_right-part
+		width: 256px;
+
+	.order-summary,
+	.business-annual, 
+	.bigger-price,
+	.subtotal-block__text, 
+	.estimated-taxes__text
+		font-size: 14px;
+
+	.total-due__text, 
+	.bigger-price-due
+		font-size: 20px;
+
+	.total-due
+		margin-top: 15px;
+
+	.price
+		font-size: 12px;
+
+	.price-due
+		font-size: 16px;
+
+	.credit-cards-pics_mobile
+		width: 225px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: space-between;
+
+	.input-title
+		margin-top: 0;
+		margin-bottom: 10px;
+
+	.long-input
+		width: 128px;
+
+	.forminput
+		margin-bottom: 15px;
+
+	.forminput.first-name
+		margin-right: 10px;
+
+	.forminput.zip-input
+		margin-bottom: 20px;
+
+	.forminput.input-month,
+	.forminput.input-year,
+	.forminput.cvv-block__input
+		margin-bottom: 0;
+
+	.left-part-first-block,
+	.left-part-second-block,
+	.left-part-fourth-block
+		flex-flow: column;
+
+	.left-part-second-block,
+	.left-part-third-block,
+	.left-part-fourth-block,
+	.paypal-block,
+	.startsb
+		width: 290px;
+
+	.long-input.card-input,
+	.long-input.zip-input
+		width: 280px;
+
+	.exp-date-block
+		flex-flow: column;
+
+	.cvv-block
+		flex-flow: column;
+
+	.cvv-block__title
+		margin-right: 0;
+		text-align: center;
+
+	.cvv-block__input
+		width: 100px;
+		background-position: 90px 9px;
+
+	.credit-cards-pics
+		display: none;
+
+	.paypal-block__text,
+	.startsb
+		font-size: 14px;
+
+	.startsb
+		margin-bottom: 40px;
