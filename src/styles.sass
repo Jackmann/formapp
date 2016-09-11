@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:400,700';
 
 $font-stack: Roboto;
-$break-small: 320px;
+$break-small: 500px;
 
 =border-radius($radius)
   -webkit-border-radius: $radius
@@ -29,7 +29,6 @@ h1
 	font-family: $font-stack;
 	font-weight: 400;
 	font-size: 24px;
-	margin-bottom: 30px;
 	text-align: center;
 
 input,
@@ -52,6 +51,7 @@ button
 	display: flex;
 	flex-flow: column;
 	align-items: flex-end;
+	margin-top: 30px;
 
 .left-part-first-block,
 .left-part-second-block,
@@ -189,10 +189,11 @@ button
 .main-block_right-part
 	border: 1px solid #ddd;
 	padding: 18px 16px;
-	width: 310px;
+	width: 300px;
 	text-align: center;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
 	margin-left: 40px;
+	margin-top: 30px;
 
 .order-summary
 	font-family: $font-stack;
@@ -262,22 +263,21 @@ button
 .credit-cards-pics_mobile
 	display: none;
 
-@media only screen and (max-width: 500px)
+@media only screen and (max-width: $break-small)
 	h1
 		font-size: 18px;
-		margin-bottom: 25px;
 
 	.align-block
 		margin-top: 35px;
 
 	.main-block_right-part
 		margin-left: 0;
+		margin-top: 25px;
+		width: 256px;
 
 	.main-block_left-part
 		align-items: center;
-
-	.main-block_right-part
-		width: 256px;
+		margin-top: 23px;
 
 	.order-summary,
 	.business-annual, 
@@ -302,7 +302,6 @@ button
 	.credit-cards-pics_mobile
 		width: 225px;
 		margin-top: 20px;
-		margin-bottom: 20px;
 		display: flex;
 		justify-content: space-between;
 
